@@ -10,6 +10,10 @@ const Navbar = () => {
       path: "/form",
       pathname: "Form",
     },
+    {
+      path: "/result",
+      pathname: "FormResult",
+    },
   ];
   return (
     <>

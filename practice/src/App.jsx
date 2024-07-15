@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./Home";
 import FormData from "./FormData";
 import Navbar from "./Navbar";
+import Result from "./Result";
 
 const App = () => {
   return (
@@ -12,7 +13,8 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
 
-          <Route path="/form" element={<FormData />}></Route>
+          <Route path="/form" element={<FormData />} />
+          <Route path="/result" element={<Result />}></Route>
         </Routes>
       </BrowserRouter>
     </>
