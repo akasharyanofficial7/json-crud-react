@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
-
 import axios from "axios";
+import UpdateData from "./UpdateData";
+import { Link } from "react-router-dom";
+
 const Result = () => {
-  const [data1, setData] = useState([]);
+  const [data, setData] = useState([]);
+  const [editUserId, setEditUserId] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -16,16 +19,28 @@ const Result = () => {
     fetchData();
   }, []);
 
+  const handleEdit = (id) => {
+    setEditUserId(id);
+  };
+
   return (
     <div className="container">
       <h1>Fetched Data</h1>
       <ul className="list-group">
-        {data1.map((item) => (
+        {data.map((item) => (
           <li key={item.id} className="list-group-item">
             {item.name} - {item.email}
+            <Link
+              to="/updatedata"
+              className="btn btn-primary ml-5 pl-5"
+              onClick={() => handleEdit(item.id)}
+            >
+              Edit
+            </Link>
           </li>
         ))}
       </ul>
+      {editUserId && <UpdateData userId={editUserId} />}
     </div>
   );
 };

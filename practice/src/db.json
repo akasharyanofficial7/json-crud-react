@@ -1,80 +1,40 @@
 {
   "users": [
     {
-      "name": "akku",
-      "id": "d16f"
+      "id": "4eba",
+      "email": "akku123@gmail.com",
+      "password": "akkuasbhcb c",
+      "name": "akash gupta"
     },
     {
-      "id": "3362",
-      "name": "akash gupta",
-      "email": "akasharyangupta7@gmail.com",
-      "password": "123455677"
+      "id": "6732",
+      "email": "akku123@gmail.com",
+      "password": "akskxjsjx",
+      "name": "akash"
     },
     {
-      "id": "127f",
-      "name": "akash dsyjshtsf",
-      "password": "123456799",
-      "email": "vijay@gmail.com"
+      "id": "33ff",
+      "email": "amit@gmail.com",
+      "password": "123456789",
+      "name": "amit"
     },
     {
-      "id": "ff42",
-      "name": "wlakefnrj",
-      "email": "vikas@gmail.com",
-      "password": "wlknfekjnf"
+      "id": "e4ab",
+      "name": "amit3",
+      "email": "amit@gmail.com",
+      "password": "123456789"
     },
     {
-      "id": "7426",
-      "name": "akash dsyjshtsf",
-      "email": "hp@gmail.com",
-      "password": "qwklxnlkmnc"
+      "id": "c726",
+      "email": "akku123@gmail.com",
+      "password": "12345",
+      "name": "akku"
     },
     {
-      "id": "6cec",
-      "name": "",
-      "email": "",
-      "password": ""
-    },
-    {
-      "id": "12cd",
-      "name": "asx sms",
-      "email": "aryanakasharyan@gmail.com",
-      "password": ".nc dkjc"
-    },
-    {
-      "id": "cf5b",
-      "name": "",
-      "email": "",
-      "password": ""
-    },
-    {
-      "id": "dee5",
-      "email": "lalau@gmail.comm",
-      "password": "dc djkvc fkjv fk",
-      "name": "fkmv f"
-    },
-    {
-      "id": "5765",
-      "email": "lalau@gmail.comm",
-      "password": "dc djkvc fkjv fk",
-      "name": "fkmv f"
-    },
-    {
-      "id": "f8d9",
-      "email": "lalau@gmail.comm",
-      "password": "dc djkvc fkjv fk",
-      "name": "fkmv f"
-    },
-    {
-      "id": "fdb8",
-      "email": "lalau@gmail.comm",
-      "password": "dc djkvc fkjv fk",
-      "name": "fkmv f"
-    },
-    {
-      "id": "7894",
-      "email": "lalau1@gmail.com",
-      "password": "lalu123",
-      "name": "akash dsyjshtsf"
+      "id": "99e5",
+      "name": "akku1",
+      "email": "akku123@gmail.com",
+      "password": "12345"
     }
   ]
 }

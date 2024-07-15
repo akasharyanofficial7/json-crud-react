@@ -1,27 +1,50 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 import { Link } from "react-router-dom";
+const UpdateData = ({ userId }) => {
+  const [user, setUser] = useState({ name: "", email: "", password: "" });
 
-const FormData = () => {
-  const [user, setUser] = useState({});
+  useEffect(() => {
+    if (userId) {
+      const fetchUser = async () => {
+        try {
+          const response = await axios.get(
+            `http://localhost:3000/users/${userId}`
+          );
+          setUser(response.data);
+        } catch (error) {
+          console.error("Error fetching user data:", error);
+        }
+      };
+      fetchUser();
+    }
+  }, [userId]);
 
-  const handleChange = async (e) => {
+  const handleChange = (e) => {
     setUser({ ...user, [e.target.name]: e.target.value });
-    console.log(user);
   };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:3000/users", user);
+      if (userId) {
+        await axios.put(`http://localhost:3000/users/${userId}`, user);
+        alert("User updated successfully");
+      } else {
+        await axios.post("http://localhost:3000/users", user);
+        alert("User added successfully");
+      }
       setUser({ name: "", email: "", password: "" });
-      alert("user added successfully");
-    } catch (error) {}
+    } catch (error) {
+      console.error("Error saving user data:", error);
+    }
   };
+
   return (
     <>
-      <div className="container  w-50 mt-5">
-        <h2>Sign Up</h2>
+      <div className="container  w-50 mt-5  bg-dark ">
+        <h2 className="container  w-50 mt-5  bg-primary">Update this form</h2>
         <form onSubmit={handleSubmit}>
           <div className="mb-3">
             <label htmlFor="name" className="form-label">
@@ -68,8 +91,8 @@ const FormData = () => {
           <button type="submit" className="btn btn-primary">
             Submit
           </button>
-          <Link to="/updatedata" className="btn btn-dark m-2">
-            Update
+          <Link to="/result" className="btn btn-success m-2">
+            Result
           </Link>
         </form>
       </div>
@@ -77,4 +100,4 @@ const FormData = () => {
   );
 };
 
-export default FormData;
+export default UpdateData;
