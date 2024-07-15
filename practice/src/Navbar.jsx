@@ -28,9 +28,9 @@ const Navbar = () => {
           </button>
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
-              {navData.map((val) => {
+              {navData.map((val, index) => {
                 return (
-                  <li className="nav-item">
+                  <li className="nav-ite" key={index}>
                     <Link
                       className="nav-link active"
                       aria-current="page"

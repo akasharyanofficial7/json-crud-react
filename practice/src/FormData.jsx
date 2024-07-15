@@ -9,9 +9,9 @@ const FormData = () => {
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     try {
       await axios.post("http://localhost:3000/users", user);
+      setUser({ name: "", email: "", password: "" });
       alert("user added successfully");
     } catch (error) {}
   };
@@ -19,7 +19,7 @@ const FormData = () => {
     <>
       <div className="container  w-50 mt-5">
         <h2>Sign Up</h2>
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className="mb-3">
             <label htmlFor="name" className="form-label">
               Name
@@ -29,6 +29,7 @@ const FormData = () => {
               className="form-control"
               id="name"
               name="name"
+              value={user.name}
               placeholder="Enter your name"
               onChange={handleChange}
             />
@@ -40,9 +41,11 @@ const FormData = () => {
             <input
               type="email"
               name="email"
+              value={user.email}
               className="form-control"
               id="email"
               placeholder="Enter your email"
+              onChange={handleChange}
             />
           </div>
           <div className="mb-3">
@@ -52,9 +55,11 @@ const FormData = () => {
             <input
               type="password"
               name="password"
+              value={user.password}
               className="form-control"
               id="password"
               placeholder="Enter your password"
+              onChange={handleChange}
             />
           </div>
           <button type="submit" className="btn btn-primary">
